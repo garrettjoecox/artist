@@ -1,0 +1,124 @@
+.artistV {
+  @extend .col;
+
+  .banner {
+    height: 25vh;
+    max-height: 25vh;
+    min-height: 2rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .nav {
+
+    .top {
+      background: #F5F5F5;
+      background: linear-gradient(to right, #FFF, #DDD);
+      border-bottom: 1px solid #CCC;
+      border-top: 1px solid #CCC;
+
+      .contained {
+        padding: 1rem;
+        @extend .row;
+      }
+
+
+      .left, .right {
+        @extend .f1;
+        @extend .row;
+        @extend .aic;
+      }
+
+      .right {
+        justify-content: flex-end;
+      }
+
+      .btn {
+        padding: 0.5rem 2rem;
+        border: 1px solid #AAA;
+        border-radius: 20px;
+        background: white;
+        color: #555;
+        font-weight: 600;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .avatar {
+        $size: 7rem;
+
+        border: 1px solid #CCC;
+        max-height: $size;
+        max-width: $size;
+        min-height: $size;
+        min-width: $size;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .meta {
+        padding-left: 1rem;
+
+        .name {
+          font-size: 2.5rem;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .following {
+          padding-top: 0.5rem;
+          color: #888;
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .left {
+          flex-direction: column;
+        }
+
+        .right {
+          padding-top: 1rem;
+          justify-content: center;
+        }
+
+        .contained {
+          flex-direction: column;
+        }
+
+        .meta {
+          padding-left: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .bottom {
+      @extend .row;
+      justify-content: center;
+      padding: 0.5rem;
+
+      .tab {
+        padding: 0.5rem 2rem;
+        color: #888;
+        font-weight: 100;
+        transition: all 100ms ease;
+        cursor: pointer;
+
+        &.active, &:hover {
+          color: #333;
+        }
+
+        &.active {
+          border-bottom: 3px solid black;
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .tab {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

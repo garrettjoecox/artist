@@ -1,0 +1,4 @@
+<div class="searchV col">
+  <input type="text" placeholder="Search Artists" ng-model="searchC.search">
+  <a ng-repeat="artist in searchC.artists | filter:searchC.search" href="#/{{artist.id}}">{{artist.displayName}}</a>
+</div>

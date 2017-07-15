@@ -5,8 +5,14 @@
   "rules": {
     "no-use-before-define": [ "error", "nofunc" ],
     "no-underscore-dangle": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "arrow-body-style": "off",
+    "no-param-reassign": "off",
+    "no-confusing-arrow": "off",
+    "no-return-assign": "off"
   },
-  "globals": {},
+  "globals": {
+    "angular": true
+  },
   "extends": "airbnb-base"
 }
